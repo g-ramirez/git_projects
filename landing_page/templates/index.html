@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mycss.css')}}">
+    <script type="text/javascript" src="{{ url_for('static', filename='index.js')}}"></script>
+
+  <body>
+    <h1>Welcome to the index page!</h1>
+    <h2>Below are a list of available routes for this site:</h2>
+    <ul>
+      <li><a href="http://localhost:5050/">/</a> - this is the default route which presents us with this page</li>
+      <li><a href="http://localhost:5050/ninjas.html">/ninjas</a> - presents ninjas.html and displays info about ninjs</li>
+      <li><a href="http://localhost:5050/dojo/newhtml">/dojo/new</a> - presents dojo.html that has a form </li>
+    </ul>
+  </body>
+</html>
