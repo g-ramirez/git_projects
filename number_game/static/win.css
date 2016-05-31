@@ -1,0 +1,47 @@
+* {
+  font-family: sans-serif;
+}
+
+.main-content {
+  display: inline-block;
+  margin: 50px 0 0 150px;
+
+}
+  h3 {
+    margin-bottom: 0px;
+  }
+  h4 {
+    margin-top: 0px;
+    margin-left: 150px;
+  }
+
+  .win-box {
+    display: inline-block;
+    width: 250px;
+    height: 200px;
+    background-color: green;
+    margin-left: 75px;
+    margin-bottom: 10px;
+  }
+    .win-box p {
+      margin-left: 20px;
+      line-height: 150px;
+      height: 50px;
+      color: white;
+    }
+    .win-box form {
+      display: inline-block;
+      margin-top: 70px;
+      margin-left: 80px;
+    }
+  .note {
+    display: inline-block;
+    height: 140px;
+    width: 200px;
+    background-color: yellow;
+    vertical-align: top;
+    margin: 35px 0 0 20px;
+  }
+    .note p {
+      margin: 40px 0 0 5px;
+    }
