@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Counter</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/index.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css')}}">
+  </head>
+  <body>
+    <div class="counter">
+      <h3>Counter</h3>
+      <h4>{{count}} times</h4>
+      <form class="reset" action="/reset" method="post">
+        <input type="submit" name="reset" value="reset">
+      </form>
+      <form class="plus-2" action="/plus2" method="post" >
+        <input type="submit" name="plus 2" value="plus-2">
+      </form>
+    </div>
+  </body>
+</html>
