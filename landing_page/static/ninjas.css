@@ -6,7 +6,9 @@ img {
   height: 200px;
   width: 200px;
 }
-
+h1 {
+  color: white;
+}
 p {
   color: white;
 }
