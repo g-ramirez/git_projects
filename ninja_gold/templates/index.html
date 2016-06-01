@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Gold</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/index.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="index.css")}}">
+  </head>
+  <body>
+    <div class="counter">
+      Your Gold: <input type="text" value="{{count}}" readonly>
+    </div>
+    <div class="choices">
+      <div class="building">
+        <h3>Farm</h3>
+        <p>(earns 10-20 golds)</p>
+        <form class="process_money" action="/process_money" method="post">
+          <input type="hidden" name="building" value="farm"/>
+          <input type="submit" name="submit" value="Find Gold!">
+        </form>
+      </div>
+      <div class="building">
+        <h3>Cave</h3>
+        <p>(earns 5-10 golds)</p>
+        <form class="process_money" action="/process_money" method="post">
+          <input type="hidden" name="building" value="cave" />
+          <input type="submit" name="submit" value="Find Gold!">
+        </form>
+      </div>
+      <div class="building">
+        <h3>House</h3>
+        <p>(earns 2-5 golds)</p>
+        <form class="process_money" action="/process_money" method="post">
+          <input type="hidden" name="building" value="house" />
+          <input type="submit" name="submit" value="Find Gold!">
+        </form>
+      </div>
+      <div class="building">
+        <h3>Casino</h3>
+        <p>(earns/takes 0-50 golds)</p>
+        <form class="process_money" action="/process_money" method="post">
+          <input type="hidden" name="building" value="casino" />
+          <input type="submit" name="submit" value="Find Gold!">
+        </form>
+      </div>
+    </div>
+    <p class="activities-text">Activites:</p>
+    <div class="activities-box">
+      {% for line in activities %}
+      <p>{{line}}</p>
+      {% endfor %}
+    </div>
+    <form class="reset" action="/reset" method="post">
+      <input type="submit" name="reset" value="Reset">
+    </form>
+  </body>
+</html>
