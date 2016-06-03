@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css' )}}">
+    <!-- <link rel="stylesheet" type="text/css" href="../static/index.css">  -->
+  </head>
+  <body>
+    <h1>Please complete below survey</h1>
+    <div class="survey-box">
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% if "name" in messages %}
+            <p class="error">Name cannot be empty!</p>
+          {% endif %}
+        {% endif %}
+        <form action="/results" method="post">
+          Your Name: <input type="text" name="name" value="">
+          <br>
+          Location: <select name="location">
+                      <option value="Walla Walla">Walla Walla</option>
+                      <option value="Keokuk">Keokuk</option>
+                      <option value="Walla Walla">Cucamonga</option>
+                      <option value="Walla Walla">Seattle</option>
+                    </select>
+          <br>
+          Favorite Language: <select name="language">
+                              <option value="Python">Python</option>
+                              <option value="Java">Java</option>
+                              <option value="Javascript">Javascript</option>
+                              <option value="C">C</option>
+                    </select>
+          <br>
+          Comment (optional):
+          <br>
+            <textarea class="comment" name="comment"></textarea>
+          <br>
+            <input class="submit" type="submit" value="Submit">
+        </form>
+        {% if messages %}
+          {% if "comment" in messages  %}
+            <p class="error">Comment more than 250 chars!</p>
+          {% endif %}
+        {% endif %}
+      {% endwith %}
+    </div>
+  </body>
+</html>
