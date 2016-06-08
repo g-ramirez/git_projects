@@ -7,5 +7,5 @@ class Dragon(Animal):
 
     def fly(self):
         print "Flying..."
-        self.health +=10
+        self.health -=10
         return self
