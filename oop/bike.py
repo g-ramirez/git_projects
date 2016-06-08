@@ -12,10 +12,12 @@ class Bike(object):
     def ride(self):
         print "Riding..."
         self.miles +=10
+        return self
 
     def reverse(self):
         print "Reversing..."
         self.miles -=5
+        return self
 
 bike1 = Bike(200, "25mph")
 bike2 = Bike(100, "10mph")
@@ -23,32 +25,20 @@ bike3 = Bike(50, "500mph")
 
 #Have the first instance ride three times, reverse once and have it displayInfo().
 print "bike 1 doing its thing..."
-bike1.ride()
-bike1.ride()
-bike1.ride()
-bike1.reverse()
-bike1.displayInfo()
+bike1.ride().ride().ride().reverse().displayInfo()
 print "done"
 print
 
 #Have the second instance ride twice, reverse twice and have it displayInfo()
 print "bike 2 doing its thing..."
-bike2.ride()
-bike2.ride()
-bike2.reverse()
-bike2.reverse()
-bike2.displayInfo()
+bike2.ride().ride().reverse().reverse().displayInfo()
+
 print "done"
 print
 
 #Have the third instance reverse three times and displayInfo().
 print "bike 3 doing its thing"
-bike3.ride()
-bike3.ride()
-bike3.ride()
-bike3.reverse()
-bike3.reverse()
-bike3.reverse()
+bike3.reverse().reverse().reverse().displayInfo()
 bike3.displayInfo()
 print "done"
 print
