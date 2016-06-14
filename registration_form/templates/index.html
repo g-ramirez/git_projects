@@ -3,9 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Registration Form</title>
-    <link rel="stylesheet" type="text/css" href="../static/index.css">
   </head>
   <body>
+    <!-- All fields are required and must not be blank
+    First and Last Name cannot contain any numbers
+    Password should be more than 8 characters
+    Email should be a valid email
+    Password and Password Confirmation should match -->
 
+  <h1>Registration form with validation of input data</h1>
+  <form action="/submit" method="post">
+    First Name: <input type="text" name="first-name">
+    <br>
+    Last Name: <input type="text" name="last-name">
+    <br>
+    Birth day: <input type="date" name="bday">
+    <br>
+    Password: <input type="password" name="password">
+    <br>
+    Confirm password: <input type="password" name="confirm-password">
+    <br>
+    <input type="submit">
+  </form>
+  <div class="flash">
+    {% with messages = get_flashed_messages() %}
+      {% for message in messages %}
+        <p>{{message}}</p>
+      {% endfor %}
+    {% endwith %}    
+  </div>
   </body>
 </html>
