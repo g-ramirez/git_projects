@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Friends index</title>
+  </head>
+  <body>
+    <h1> Here is a list of your friends</h1>
+    <hr>
+    <div class="friends">
+      <ol>
+      {% for friend in friends: %}
+        <li>
+          <form action = "/friends/{{friend['id']}}/edit" method="get">
+            {{friend['first_name']}} {{friend['last_name']}}
+            <button type="submit">Edit</button>
+            <button type="submit" formaction="/friends/{{friend['id']}}/delete" formmethod="post">Delete</button>
+          </form>
+        </li>
+      {% endfor %}
+      </ol>
+    </div>
+    <hr>
+    <h2> Use below form to add another friend</h2>
+    <form action="/friends" method="post">
+      First Name: <input type="text" name="first-name">
+      <br>
+      Last Name: <input type="text" name="last-name">
+      <br>
+                <input type="submit" value="Submit">
+      </form>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages: %}
+             <div class="flashed">
+               {{message}}
+             </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+  </body>
+</html>

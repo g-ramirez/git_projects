@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, render_template, session, flash
-from myslconnect import MySQLConnector
+from mysqlconnection import MySQLConnector
 from validate_email import validate_email
 
 app = Flask(__name__)
