@@ -1,0 +1,149 @@
+
+.header {
+  background-color: #ff6600;
+  height: 35px;
+  width: 1050px;
+}
+  .header img {
+    margin-left: 150px;
+  }
+  .login {
+    display: inline-block;
+    color: #993d00;
+    text-decoration: none;
+    margin-left: 500px;
+  }
+  .signup {
+    display: inline-block;
+    color:  #ffb380;
+    text-decoration: none;
+  }
+.banner {
+  height: 103px;
+  width: 1050px;
+  background-color: #f2f2f2;
+}
+  .banner img {
+    margin-left: 150px
+  }
+  .banner ul {
+    display: inline;
+    vertical-align: top;
+
+  }
+    .banner ul li {
+      display: inline;
+      vertical-align: top;
+      padding: 5px;
+      line-height: 103px;
+
+  }
+     .banner ul li a {
+       font-family: sans-serif;
+       display: inline-block;
+       color: black;
+       text-decoration: none;
+       vertical-align: top;
+     }
+ .nav-bar {
+   height: 40px;
+   margin-top: 20px;
+ }
+
+  .nav-bar ul {
+    display: inline;
+    vertical-align: top;
+  }
+
+  .nav-bar ul li {
+    display: inline;
+    vertical-align: top;
+  }
+    .nav-bar ul li a {
+      font-family: sans-serif;
+      display: inline-block;
+      color: gray;
+      text-decoration: none;
+      vertical-align: top;
+    }
+.contact-info {
+  height: 70px;
+  width: 750px;
+  margin-left: 40px;
+}
+  .contact-info h2 {
+    font-family: sans-serif;
+    color: orange;
+    margin-bottom: 5px;
+  }
+  .contact-info p {
+    width: 750px;
+    font-family: sans-serif;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+.info-boxes {
+  vertical-align: top;
+  margin-left: 40px;
+  margin-top: 15px;
+  width: 402px;
+  display: inline-block;
+}
+
+.info-boxes hr {
+  margin-left: 0px;
+  width: 402px;
+}
+  .info-boxes p {
+    margin: 0;
+    padding 0;
+  }
+
+  .info-boxes h3 {
+    color: orange;
+  }
+  .name {
+    width: 396px
+  }
+  .phone {
+    width: 194px;
+    padding: 0px;
+  }
+  .email {
+    width: 195px;
+    padding: 0px;
+ }
+   .message {
+     width: 396px;
+   }
+
+  .submit {
+    background-color: orange;
+  }
+
+.info-boxes ul {
+  margin-top: 100px;
+  display: inline;
+  vertical-align: top;
+  padding: 0px;
+}
+
+.info-boxes ul li {
+  display: inline;
+  vertical-align: top;
+}
+
+.info-boxes ul li a {
+  font-family: sans-serif;
+  display: inline-block;
+  color: gray;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+.info-boxes ul li a img {
+  display: inline-block;
+  height: 30px;
+  width: auto;
+}
