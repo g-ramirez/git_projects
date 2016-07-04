@@ -2,12 +2,54 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Success</title>
+    <title>Wall</title>
+    <link rel="stylesheet" type="text/css" href="../static/wall.css">
   </head>
   <body>
-    <h1>Success!!! Thank you for logging in or registering, {{username}}</h1>
-    <form action="/logout" method="post">
-      <button type="submit">Logout</button>
-    </form>
+
+    {% if first_name %}
+      <div class="header">
+        <p class="title">The wall</p>
+        <p class="welcome">Welcome {{first_name}}</p>
+        <a href="http://localhost:5000/logout">Log off</a>
+      </div>
+    {% else %}
+    <div class="header">
+      <p class="title">The wall</p>
+      <p class="welcome">You are not logged in!</p>
+      <a href="http://localhost:5000/">Log in</a>
+    </div>
+    {% endif %}
+    <div class="message-box">
+      <h5>Post a message</h5>
+      <form action="/message" method="post">
+        <textarea name="message" placeholder="Enter a message..."></textarea>
+        <input type="hidden" name="user-id" value="{{user_id}}">
+        <br>
+        <input type="submit" value="Post">
+      </form>
+    </div>
+    {% if messages %}
+      {% for message in messages %}
+      <div class="message">
+        <h3>{{get_message_author(message['user_id'])}} - {{get_readable_timestamp(message['created_at'])}}
+        <p>{{message['message']}}</p>
+        {% if get_message_comments(message['id']) %}
+          {% for comment in get_message_comments(message['id']) %}
+            <div class="comment">
+              <h4>{{get_comment_author(comment['user_id'])}} - {{get_readable_timestamp(comment['created_at'])}}</h4>
+              <p>{{comment['comment']}}</p>
+            </div>
+          {% endfor %}
+        {% endif %}
+        <form action="/comment/{{message['id']}}" method="post">
+          <textarea name="comment" placeholder="Enter a comment..."></textarea>
+          <input type="hidden" name="user-id" value="{{user_id}}">
+          <br>
+          <input type="submit" value="Post">
+        </form>
+      </div>
+      {% endfor %}
+    {% endif %}
   </body>
 </html>

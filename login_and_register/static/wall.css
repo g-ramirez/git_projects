@@ -1,0 +1,45 @@
+.header {
+  display: inline-block;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  width: 715px;
+  border-bottom: solid black 2px;
+}
+  .title {
+    display: inline-block;
+    margin: 15px 0 0 15px;
+    padding: 0;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  .welcome {
+    display: inline-block;
+    margin: 15px 0 0 400px;
+    vertical-align: top;
+    padding: 0;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+
+.message-box {
+  margin: 50px 0 0 30px;
+}
+.message {
+  margin-left: 25px;
+}
+  h5 {
+    margin: 0px;
+    padding: 0px;
+  }
+  textarea {
+    width: 550px;
+    height: 50px;
+  }
+
+  input {
+    margin-left: 520px;
+  }
+  .comment {
+    margin-left: 15px;
+  }
