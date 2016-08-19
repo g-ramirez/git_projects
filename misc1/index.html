@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+      <script>
+      $(document).ready(function() {
+        for (var i = 1; i<152; i++) {
+          $("body").append('<img src="http://pokeapi.co/media/img/' + i.toString() + '.png" width="150" height="150">');
+        }
+      })
+      </script>
+  </body>
+</html>
